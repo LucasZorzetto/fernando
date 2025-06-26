@@ -9,7 +9,7 @@ const {
 const fs = require('fs');
 const path = require('path');
 
-const token = require('./config.json');
+//const token = require('./config.json');
 
 const client = new Client({
     intents: [
@@ -140,4 +140,4 @@ client.on('messageCreate', async (message) => {
     }
 });
 
-client.login(token.token);
+client.login(process.env.TOKEN);
