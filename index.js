@@ -154,8 +154,4 @@ client.on('messageCreate', async (message) => {
     }
 });
 
-<<<<<<< HEAD
 client.login(process.env.TOKEN);
-=======
-client.login(process.env.TOKEN);
->>>>>>> 3888356 (fake server)
