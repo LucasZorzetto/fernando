@@ -1,3 +1,17 @@
+// Fake Web Server to Keep Render Alive
+const http = require('http');
+
+// Get the port from environment variables or default to 8080
+const port = process.env.PORT || 8080;
+
+// Create a simple HTTP server
+http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Bot is running!');
+}).listen(port, () => {
+  console.log(`🌍 Fake server running on port ${port}`);
+});
+
 const { Client, GatewayIntentBits } = require('discord.js');
 const {
     joinVoiceChannel,
@@ -140,4 +154,8 @@ client.on('messageCreate', async (message) => {
     }
 });
 
+<<<<<<< HEAD
 client.login(process.env.TOKEN);
+=======
+client.login(process.env.TOKEN);
+>>>>>>> 3888356 (fake server)
